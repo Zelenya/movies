@@ -11,7 +11,7 @@ import Config (Config)
 import Data.Maybe (Maybe(..))
 import Data.Array.NonEmpty (NonEmptyArray)
 import Effect (Effect)
-import Effect.Aff (Aff, error, throwError)
+import Effect.Aff (Aff)
 import Service.IdList (Id, idList)
 import Service.MovieClient (Movie, Overview(..), PosterUrl(..), Title(..), getMovieById)
 import Service.WheelList (shuffle)
@@ -28,7 +28,7 @@ getMovie { movieApiUrl, posterStorageUrl } id = do
   movie <- getMovieById movieApiUrl posterStorageUrl id
   case movie of
     Just e  -> pure e
-    Nothing -> throwError $ error $ "Oopsie, no movie for you today"
+    Nothing -> pure defaultMovie
 
 loadIdList :: Effect (NonEmptyArray Id)
 loadIdList = shuffle idList

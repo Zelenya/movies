@@ -15,6 +15,7 @@ derive newtype instance Show Id
 derive newtype instance Eq Id
 derive newtype instance Ord Id
 
+-- Over the Garden Wall: "tt3718778"
 idList :: NonEmptyArray Id
 idList = Id <$> cons'
     "tt6751668"
@@ -40,15 +41,11 @@ idList = Id <$> cons'
   , "tt0446029"
   , "tt0805564"
   , "tt0061184"
-  , "tt0071315"
   , "tt0364569"
   , "tt0073486"
   , "tt0421715"
-  , "tt0120735"
-  , "tt0208092"
   , "tt0080678"
   , "tt0942385"
-  , "tt0033467"
   , "tt1450321"
   , "tt0117951"
   , "tt0425112"
@@ -69,13 +66,11 @@ idList = Id <$> cons'
   , "tt0107048"
   , "tt0119217"
   , "tt0056592"
-  , "tt0116483"
   , "tt0960144"
   , "tt0088763"
   , "tt1587707"
   , "tt2582496"
   , "tt0118715"
-  , "tt0137523"
   , "tt0780504"
   , "tt1748122"
   , "tt0109445"
@@ -93,8 +88,6 @@ idList = Id <$> cons'
   , "tt0114369"
   , "tt0258000"
   , "tt2267998"
-  , "tt1568346"
-  , "tt1285016"
   , "tt0443706"
   , "tt0409459"
   , "tt0091042"
@@ -103,5 +96,4 @@ idList = Id <$> cons'
   , "tt5311514"
   , "tt1489887"
   , "tt6710474"
-  , "tt3718778"
   ]
