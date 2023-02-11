@@ -49,7 +49,7 @@ fetchMovie (MovieApiUrl movieApiUrl) (Id id) = do
     Right movieResponse ->
       pure $ Just movieResponse
     Left e ->
-      log ("Oopsie. Couldn't decode movie response. " <> toString e) $> Nothing
+      log ("Oopsie. Couldn't decode movie response for " <> id <> ": " <> toString e) $> Nothing
   where
     toString = intercalate ", " <<< map renderForeignError
 
